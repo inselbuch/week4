@@ -81,4 +81,5 @@ oneDataSet <- select(oneDataSet,subject,activity,contains("mean"),contains("std"
 
 secondDataSet <- oneDataSet %>% group_by(subject,activity) %>% summarize_all(mean)
 
-
+# as instructed
+write.table(secondDataSet,"secondDataSet.txt", row.name=FALSE)
